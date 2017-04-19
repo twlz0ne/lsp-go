@@ -18,3 +18,4 @@
   :ignore-regexps '("^langserver-go: reading on stdin, writing on stdout$"))
 
 (provide 'lsp-go)
+;;; lsp-go.el ends here
