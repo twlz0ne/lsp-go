@@ -12,10 +12,10 @@
 (require 'go-mode)
 
 ;;;###autoload
-(lsp-define-client 'go-mode "go" 'stdio #'(lambda () default-directory)
-  :command '("go-langserver" "-mode=stdio")
-  :name "Go Language Server"
-  :ignore-regexps '("^langserver-go: reading on stdin, writing on stdout$"))
+(lsp-define-stdio-client 'go-mode "go" 'stdio #'(lambda () default-directory)
+			 "Go Language Server"
+			 '("go-langserver" "-mode=stdio")
+			 :ignore-regexps '("^langserver-go: reading on stdin, writing on stdout$"))
 
 (provide 'lsp-go)
 ;;; lsp-go.el ends here
